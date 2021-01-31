@@ -3,7 +3,7 @@ Thank you for visiting my GitHub  portfolio.
 
 This is portfolio containing some of my personal projects with a focus on C++ and computer graphics.
 
-I can be contacted at RonanQuill96@gmail.com to discuss any opportunities that you have availabel.  
+I can be contacted at RonanQuill96@gmail.com to discuss any opportunities that you have available.  
 
 # Portfolio Breakdown
 
