@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+*.ppm
+
+**/.vs
+**/Debug
+**/x64

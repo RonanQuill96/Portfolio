@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Materials">
+      <UniqueIdentifier>{9dcb756c-e116-49ac-a494-05f1ae2698aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables">
+      <UniqueIdentifier>{ffc900fb-6874-4afd-8d1e-9d333c4131a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{4a3d92cc-d6d5-4905-bfbe-d9123960975c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{97a29a9a-7b35-46a4-9beb-3058decf4e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{a2a0718e-641e-4d0e-94f1-114974543ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ray">
+      <UniqueIdentifier>{70d5c120-8af4-4283-83a4-e752ab2b9437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials\Dialetric">
+      <UniqueIdentifier>{025c48ff-a594-490e-94a2-9693c405dc29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials\Diffuse Light">
+      <UniqueIdentifier>{fa06ff29-b318-4295-8888-1783c49f7464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials\Lambertian">
+      <UniqueIdentifier>{ef6e57d5-02f8-4bf7-a439-d55c8d458ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials\Metal">
+      <UniqueIdentifier>{33b72db9-cac4-4933-b52b-f4da3b5dab31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Box">
+      <UniqueIdentifier>{35d30a22-70bb-4143-8a2a-dccfd1df812e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\BVHNode">
+      <UniqueIdentifier>{286a5875-dc50-41e7-ad1e-767cb50ee578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Instances">
+      <UniqueIdentifier>{10832617-ff0c-4f12-8305-f77702edfa0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Instances\Y Rotation">
+      <UniqueIdentifier>{e8be6f90-a4fa-4c32-a1f0-8b427ff31d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Instances\Translation">
+      <UniqueIdentifier>{0078e237-285e-43b7-b1c7-d1e9e7b8fba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Sphere">
+      <UniqueIdentifier>{ba9fe928-cb52-4392-b561-febf8fa75029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Sphere\Moving Sphere">
+      <UniqueIdentifier>{5b21fcef-1620-4b5a-aa71-584de1a09991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Hittable List">
+      <UniqueIdentifier>{d3c8fc2c-3548-47ff-9c4d-2e5bc294a4e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Rectangle">
+      <UniqueIdentifier>{526c15f8-3884-4535-b155-143873960e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Rectangle\XY">
+      <UniqueIdentifier>{548620ff-77c9-4d12-9c00-424d1e2a0252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Rectangle\YZ">
+      <UniqueIdentifier>{1e49da44-0a76-47e3-8ae1-ddad32060b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hittables\Rectangle\XZ">
+      <UniqueIdentifier>{e8826be8-4988-4459-985c-56e91dd797ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\AABB">
+      <UniqueIdentifier>{5b8e5f27-f269-4303-95e3-b56f60c37a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Perlin Noise">
+      <UniqueIdentifier>{a4aa27d8-993c-45e0-899c-9a9a7e66d795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Scenes">
+      <UniqueIdentifier>{6ae42223-69e4-4fbc-a0f7-dcfccdcae0f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Vector 3">
+      <UniqueIdentifier>{7f6973dc-d462-4a49-ac5f-826ab140e27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\Checker Texture">
+      <UniqueIdentifier>{c785d984-b7e2-457d-8eff-ead319a9a1d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\Constant Colour">
+      <UniqueIdentifier>{bd453304-636b-4f89-b93f-edb569183cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\Image Texture">
+      <UniqueIdentifier>{e04636a8-9e86-42d0-8953-1b696ff6b9fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\Noise Texture">
+      <UniqueIdentifier>{f1235508-3d9e-46e3-bd55-c1efb8d663a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Material.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageData.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Hittable.h">
+      <Filter>Hittables</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialectric.h">
+      <Filter>Materials\Dialetric</Filter>
+    </ClInclude>
+    <ClInclude Include="DiffuseLight.h">
+      <Filter>Materials\Diffuse Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Lambertian.h">
+      <Filter>Materials\Lambertian</Filter>
+    </ClInclude>
+    <ClInclude Include="Metal.h">
+      <Filter>Materials\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Hittables\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="BVHNode.h">
+      <Filter>Hittables\BVHNode</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceYRotation.h">
+      <Filter>Hittables\Instances\Y Rotation</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceTranslation.h">
+      <Filter>Hittables\Instances\Translation</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingSphere.h">
+      <Filter>Hittables\Sphere\Moving Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="HittableList.h">
+      <Filter>Hittables\Hittable List</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Hittables\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="XYRectangle.h">
+      <Filter>Hittables\Rectangle\XY</Filter>
+    </ClInclude>
+    <ClInclude Include="YZRectangle.h">
+      <Filter>Hittables\Rectangle\YZ</Filter>
+    </ClInclude>
+    <ClInclude Include="XZRectangle.h">
+      <Filter>Hittables\Rectangle\XZ</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Utils\AABB</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Utils\Perlin Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes.h">
+      <Filter>Utils\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Utils\Vector 3</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckerTexture.h">
+      <Filter>Texture\Checker Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantColour.h">
+      <Filter>Texture\Constant Colour</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTexture.h">
+      <Filter>Texture\Image Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="NoiseTexture.h">
+      <Filter>Texture\Noise Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Dialectric.cpp">
+      <Filter>Materials\Dialetric</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffuseLight.cpp">
+      <Filter>Materials\Diffuse Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambertian.cpp">
+      <Filter>Materials\Lambertian</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Metal.cpp">
+      <Filter>Materials\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Hittables\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="BVHNode.cpp">
+      <Filter>Hittables\BVHNode</Filter>
+    </ClCompile>
+    <ClCompile Include="InstanceYRotation.cpp">
+      <Filter>Hittables\Instances\Y Rotation</Filter>
+    </ClCompile>
+    <ClCompile Include="InstanceTranslation.cpp">
+      <Filter>Hittables\Instances\Translation</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingSphere.cpp">
+      <Filter>Hittables\Sphere\Moving Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="HittableList.cpp">
+      <Filter>Hittables\Hittable List</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Hittables\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="XYRectangle.cpp">
+      <Filter>Hittables\Rectangle\XY</Filter>
+    </ClCompile>
+    <ClCompile Include="YZRectangle.cpp">
+      <Filter>Hittables\Rectangle\YZ</Filter>
+    </ClCompile>
+    <ClCompile Include="XZRectangle.cpp">
+      <Filter>Hittables\Rectangle\XZ</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>Utils\AABB</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>Utils\Perlin Noise</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes.cpp">
+      <Filter>Utils\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckerTexture.cpp">
+      <Filter>Texture\Checker Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantColour.cpp">
+      <Filter>Texture\Constant Colour</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTexture.cpp">
+      <Filter>Texture\Image Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="NoiseTexture.cpp">
+      <Filter>Texture\Noise Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
