@@ -14,12 +14,15 @@ I can be contacted at RonanQuill96@gmail.com to discuss any opportunities that y
 2) Each folder contains a ".sln" file which can be opened in Microsoft Visual Studio 2019.
 3) Compile with C++17 enabled.
 
+
 ### SIMD Math Library
 A basic SIMD math library which contains implementations of a 4D Vector, 4x4 Matrix and associated methods.
 This library also contains a basic test suite to ensure correct functionality.
 
+
 ### Thread Pool 
-A lightweight header only C++ thread pool to allow easy use of thread pool.
+A lightweight header only C++ thread pool to allow easy use of thread pools in a project.
+
 
 ### Software Based Ray Tracer 
 A software based ray tracer created with C++ which renders individual frames of a provided scene. This is a basic ray tracer developed to familiarise myself with the techniques used when created ray tracing software.
@@ -30,6 +33,7 @@ The ray tracer is multithreaded through the use of my C++ thread pool library an
 
 ###### Example 2: Dimensions: 1920 x 1080. Samples Per Pixel: 100
 ![Random Scene](RandomScene.png)
+
 
 ### FYP Interim Report
 This is the interim submission of my undergraduate thesis which details the implmentation and theory for my Vulkan 3D rendering engine.
