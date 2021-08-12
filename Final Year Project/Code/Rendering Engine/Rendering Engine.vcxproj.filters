@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Rendering Engine">
+      <UniqueIdentifier>{a629849c-aa05-407b-9d64-e604c11a9757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI">
+      <UniqueIdentifier>{c010faf2-1e07-4444-b722-ea09f3a7d0ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Vulkan Instance">
+      <UniqueIdentifier>{da03eb44-24e4-407c-a922-b5c776ddb60a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Logical Device">
+      <UniqueIdentifier>{9943dde6-e9f2-44f1-91d9-dc8255cdd453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Physical Device">
+      <UniqueIdentifier>{cb33b2d2-ed0d-4b77-ae66-a2d1105cef8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Swap Chain">
+      <UniqueIdentifier>{1d97a890-fa89-4c50-abd0-7d6cf86b0fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Command Pool">
+      <UniqueIdentifier>{f4d16cf6-1e62-443a-b1a6-f0be681a22c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Buffers">
+      <UniqueIdentifier>{a6f08ad3-ab95-4c8f-a852-c6408c528cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Buffers\Vertex Buffer">
+      <UniqueIdentifier>{4052d32e-a4b0-44e0-8b28-f9fa09e6791c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Buffers\Index Buffer">
+      <UniqueIdentifier>{df249bd9-e4f9-4769-bc4f-3701561466dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Buffers\Uniform Buffer">
+      <UniqueIdentifier>{8a654759-fd7b-469b-a39a-e5573dd1a646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils">
+      <UniqueIdentifier>{bac5f149-89fb-4bb7-9c44-de7a62cac03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{6346039b-ab67-4df3-b4fa-704312a9e68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{14d1574b-14cb-4704-a011-b030073a579c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Asset Manager">
+      <UniqueIdentifier>{8ed03e74-80f4-4b39-a586-1df0ea884dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{02a62b97-b448-4a91-8be5-bf385f8db5ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes">
+      <UniqueIdentifier>{83d4111f-3fc7-48c0-b3a4-7957c3195b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Geometry Generator">
+      <UniqueIdentifier>{dc2b7c63-e90b-47b8-af87-7770febfe35a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{d8ad04ed-2a9a-4f19-b28e-c5c493461011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components">
+      <UniqueIdentifier>{45efdd5d-aef9-480d-a206-de214b90fcc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Asset Manager\Asset Types">
+      <UniqueIdentifier>{5a8b4b56-56d8-4a5b-9b2c-4aa8f50ec667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Asset Manager\Asset Types\Material">
+      <UniqueIdentifier>{1947c25f-8c2d-4ee3-81fe-939455423b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\MeshComponent">
+      <UniqueIdentifier>{29ce1bab-08d3-47fe-821c-4562a14873f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Rendering Scene">
+      <UniqueIdentifier>{2f652670-9d6f-4d7b-b22c-2879c4477a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\Camera Component">
+      <UniqueIdentifier>{40f4db3f-17aa-4ff2-8e83-23eaa037e2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map">
+      <UniqueIdentifier>{7a17d920-dbfe-4b64-a492-d551a78d5f0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Timer">
+      <UniqueIdentifier>{33cee21c-dca9-4e87-8d75-1df773e37583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map\Environement Map Generators">
+      <UniqueIdentifier>{b62e7192-37e0-4cdc-8615-41f05b44c7d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map\Environement Map Generators\Integration Map Generator Pass">
+      <UniqueIdentifier>{10f92003-8a70-48f2-9bc4-2743f1ebfe94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map\Environement Map Generators\Irrandiance Map Pass">
+      <UniqueIdentifier>{c4bd617f-4b7f-4789-86c8-2b2819c7641c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map\Environement Map Generators\Radiance Map Generation Pass">
+      <UniqueIdentifier>{a3e3f0a5-c4f9-44b7-9d35-676ddf05ef1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering">
+      <UniqueIdentifier>{0b178e33-e740-4a16-b020-4c3a54af2e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass">
+      <UniqueIdentifier>{d98e295d-4538-4a2d-8e12-75d545dc365c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass">
+      <UniqueIdentifier>{2afa6893-2f8f-495e-b7c5-8f1cf9dd1ce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass\Pipelines">
+      <UniqueIdentifier>{a57a3547-0c25-480e-b386-20329b63e42e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\GBuffer">
+      <UniqueIdentifier>{6c1d6c5a-d0ec-48ea-82d0-b03479d6b8bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines">
+      <UniqueIdentifier>{8cb133f0-1dc9-49de-aa21-ff86ba4b1f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Directional Light">
+      <UniqueIdentifier>{f1f5c15d-bd0c-4c23-b4b9-ab35405ab024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Enviroment Light">
+      <UniqueIdentifier>{37334e82-8589-4af9-b260-13a2f89abffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils\Descriptor Set Manager">
+      <UniqueIdentifier>{86da6a06-2b8c-46cf-997b-49e2e66eff95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\GraphicAPI\Vulkan Debug">
+      <UniqueIdentifier>{b3a14858-455d-40c8-b7a1-9f436a8e939b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Forward Renderer">
+      <UniqueIdentifier>{a0492c2c-9399-4d91-946c-b9cf46069638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\Lights">
+      <UniqueIdentifier>{920366c7-4a82-4a6e-9b0f-9d6623cde366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\Lights\Point Light Component">
+      <UniqueIdentifier>{a2eb123c-8dd7-46ba-8bc7-be987acdbb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\Lights\Directional Light Component">
+      <UniqueIdentifier>{36c46c91-156e-421c-8d3f-59cf0fa2d943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Buffers\Storage Buffer">
+      <UniqueIdentifier>{432ed054-a014-450b-9ce6-41da254bf435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\UI Renderer">
+      <UniqueIdentifier>{2c7cffd3-6306-4a7b-8e75-8d7940e77775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils\Pipeline Builder">
+      <UniqueIdentifier>{fdb5526c-d311-49b7-9d4c-400381136f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\MBOIT">
+      <UniqueIdentifier>{0b65de2d-d0e3-41dc-955d-57bb80fc2f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines">
+      <UniqueIdentifier>{17ec0d44-2515-4fb8-a08a-06fc7cea95ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Clustered Light Culling">
+      <UniqueIdentifier>{736f0b4a-62a7-42e5-a2d3-4f4810cfbe1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Image Data">
+      <UniqueIdentifier>{f6a5ad0e-c0a6-4455-9728-c8f1fdb531e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Debug">
+      <UniqueIdentifier>{0ae17268-18b4-4b7f-a373-c687a4c6ba76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils\Pipeline Builder\Compute">
+      <UniqueIdentifier>{a46b8f13-6063-4a08-819d-df79f58a7d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils\Pipeline Builder\Graphics">
+      <UniqueIdentifier>{90a1e210-a6b9-4398-9dce-a0e2c693de42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Utils\Pipeline Builder\Layout">
+      <UniqueIdentifier>{62055e8c-d685-4d60-8272-3e5e79558c58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Ambient Occlusion">
+      <UniqueIdentifier>{1eebc42a-0fdb-47e1-8496-fc160d7a7dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Octree">
+      <UniqueIdentifier>{1cc1f73d-bc51-45a1-806f-31bc6b0fa618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Environment Map\Environement Map Generators\HDR To Cube Map Converter">
+      <UniqueIdentifier>{7733581d-cf2a-4fe2-af3e-33c0126dbe04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering Engine\Render Passes\Forward Renderer\Skybox">
+      <UniqueIdentifier>{4f1a486b-8119-4b38-8665-9e560f25ef7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffer.cpp">
+      <Filter>Rendering Engine\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsAPI.cpp">
+      <Filter>Rendering Engine\GraphicAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="VulkanInstance.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Vulkan Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicalDevice.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Logical Device</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicalDevice.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Physical Device</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapChain.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Swap Chain</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandPool.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Command Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Utilities\Asset Manager\Asset Types\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingEngine.cpp">
+      <Filter>Rendering Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="VulkanApplication.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Utilities\Asset Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryGenerator.cpp">
+      <Filter>Utilities\Geometry Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshComponent.cpp">
+      <Filter>GameObject\Components\MeshComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseComponent.cpp">
+      <Filter>GameObject\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingScene.cpp">
+      <Filter>Scene\Rendering Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>GameObject\Components\Camera Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyboxPipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\Forward Renderer\Skybox</Filter>
+    </ClCompile>
+    <ClCompile Include="IrrandianceMapPass.cpp">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Irrandiance Map Pass</Filter>
+    </ClCompile>
+    <ClCompile Include="RadianceMapGenerationPass.cpp">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Radiance Map Generation Pass</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegrationMapGeneratorPass.cpp">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Integration Map Generator Pass</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemTimer.cpp">
+      <Filter>Utilities\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageUtils.cpp">
+      <Filter>Rendering Engine\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentMapGenerator.cpp">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferredRenderer.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingPass.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryPass.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMeshPipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass\Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="GBuffer.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLightComponent.cpp">
+      <Filter>GameObject\Components\Lights\Directional Light Component</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLightPipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Directional Light</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentLightPipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Enviroment Light</Filter>
+    </ClCompile>
+    <ClCompile Include="VulkanDebug.cpp">
+      <Filter>Rendering Engine\GraphicAPI\Vulkan Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardRenderer.cpp">
+      <Filter>Rendering Engine\Render Passes\Forward Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLightComponent.cpp">
+      <Filter>GameObject\Components\Lights\Point Light Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LightComponent.cpp">
+      <Filter>GameObject\Components\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMeshPBRTexturePipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass\Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRenderer.cpp">
+      <Filter>Rendering Engine\Render Passes\UI Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="MBOIT.cpp">
+      <Filter>Rendering Engine\Render Passes\MBOIT</Filter>
+    </ClCompile>
+    <ClCompile Include="MBOITStaticMeshPBRParametersPipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="MBOITStaticMeshPBRTexturePipeline.cpp">
+      <Filter>Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines</Filter>
+    </ClCompile>
+    <ClCompile Include="ClusteredLightCulling.cpp">
+      <Filter>Rendering Engine\Render Passes\Clustered Light Culling</Filter>
+    </ClCompile>
+    <ClCompile Include="ClusteredDeferredShading.cpp">
+      <Filter>Rendering Engine\Render Passes</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageData.cpp">
+      <Filter>Rendering Engine\Image Data</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLinesPipeline.cpp">
+      <Filter>Rendering Engine\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputePipelineBuilder.cpp">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Compute</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsPipelineBuilder.cpp">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PipelineLayoutBuilder.cpp">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="HorizonBasedAmbientOcclusion.cpp">
+      <Filter>Rendering Engine\Render Passes\Ambient Occlusion</Filter>
+    </ClCompile>
+    <ClCompile Include="AmbientOcclusionBlur.cpp">
+      <Filter>Rendering Engine\Render Passes\Ambient Occlusion</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingVolumes.cpp">
+      <Filter>Utilities\Octree</Filter>
+    </ClCompile>
+    <ClCompile Include="HDRToCubeMapConverter.cpp">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\HDR To Cube Map Converter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Buffer.h">
+      <Filter>Rendering Engine\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Rendering Engine\Buffers\Vertex Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Rendering Engine\Buffers\Index Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UniformBuffer.h">
+      <Filter>Rendering Engine\Buffers\Uniform Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsAPI.h">
+      <Filter>Rendering Engine\GraphicAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanInstance.h">
+      <Filter>Rendering Engine\GraphicAPI\Vulkan Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicalDevice.h">
+      <Filter>Rendering Engine\GraphicAPI\Logical Device</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicalDevice.h">
+      <Filter>Rendering Engine\GraphicAPI\Physical Device</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanIncludes.h">
+      <Filter>Rendering Engine\GraphicAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChain.h">
+      <Filter>Rendering Engine\GraphicAPI\Swap Chain</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandPool.h">
+      <Filter>Rendering Engine\GraphicAPI\Command Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Utilities\Asset Manager\Asset Types\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderUtils.h">
+      <Filter>Rendering Engine\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingEngine.h">
+      <Filter>Rendering Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Rendering Engine\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanApplication.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Utilities\Asset Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryGenerator.h">
+      <Filter>Utilities\Geometry Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Utilities\Asset Manager\Asset Types</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshMaterial.h">
+      <Filter>Utilities\Asset Manager\Asset Types</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshComponent.h">
+      <Filter>GameObject\Components\MeshComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseComponent.h">
+      <Filter>GameObject\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingScene.h">
+      <Filter>Scene\Rendering Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>GameObject\Components\Camera Component</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyboxPipeline.h">
+      <Filter>Rendering Engine\Render Passes\Forward Renderer\Skybox</Filter>
+    </ClInclude>
+    <ClInclude Include="IrrandianceMapPass.h">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Irrandiance Map Pass</Filter>
+    </ClInclude>
+    <ClInclude Include="RadianceMapGenerationPass.h">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Radiance Map Generation Pass</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrationMapGeneratorPass.h">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\Integration Map Generator Pass</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentMap.h">
+      <Filter>Rendering Engine\Environment Map</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemTimer.h">
+      <Filter>Utilities\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageUtils.h">
+      <Filter>Rendering Engine\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentMapGenerator.h">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="DeferredRenderer.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingPass.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryPass.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshPipeline.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass\Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="GBuffer.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLightComponent.h">
+      <Filter>GameObject\Components\Lights\Directional Light Component</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLightPipeline.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Directional Light</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentLightPipeline.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Lighting Pass\Pipelines\Enviroment Light</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorSetManager.h">
+      <Filter>Rendering Engine\Utils\Descriptor Set Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorSetBuilder.h">
+      <Filter>Rendering Engine\Utils\Descriptor Set Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="DescriptorSetLayoutBuilder.h">
+      <Filter>Rendering Engine\Utils\Descriptor Set Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanDebug.h">
+      <Filter>Rendering Engine\GraphicAPI\Vulkan Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRenderer.h">
+      <Filter>Rendering Engine\Render Passes\Forward Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLightComponent.h">
+      <Filter>GameObject\Components\Lights\Point Light Component</Filter>
+    </ClInclude>
+    <ClInclude Include="LightComponent.h">
+      <Filter>GameObject\Components\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshPBRTexturePipeline.h">
+      <Filter>Rendering Engine\Render Passes\Deferred Rendering\Geometry Pass\Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRenderingUtils.h">
+      <Filter>Rendering Engine\Render Passes\Forward Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalOptions.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="StorageBuffer.h">
+      <Filter>Rendering Engine\Buffers\Storage Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRenderer.h">
+      <Filter>Rendering Engine\Render Passes\UI Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MBOIT.h">
+      <Filter>Rendering Engine\Render Passes\MBOIT</Filter>
+    </ClInclude>
+    <ClInclude Include="MBOITStaticMeshPBRParametersPipeline.h">
+      <Filter>Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="MBOITUtils.h">
+      <Filter>Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="MBOITStaticMeshPBRTexturePipeline.h">
+      <Filter>Rendering Engine\Render Passes\MBOIT\MBOIT Pipelines</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueSubmitInfo.h">
+      <Filter>Rendering Engine\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusteredLightCulling.h">
+      <Filter>Rendering Engine\Render Passes\Clustered Light Culling</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusteredDeferredShading.h">
+      <Filter>Rendering Engine\Render Passes</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageData.h">
+      <Filter>Rendering Engine\Image Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLinesPipeline.h">
+      <Filter>Rendering Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputePipelineBuilder.h">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Compute</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsPipelineBuilder.h">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineLayoutBuilder.h">
+      <Filter>Rendering Engine\Utils\Pipeline Builder\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="HorizonBasedAmbientOcclusion.h">
+      <Filter>Rendering Engine\Render Passes\Ambient Occlusion</Filter>
+    </ClInclude>
+    <ClInclude Include="AmbientOcclusionBlur.h">
+      <Filter>Rendering Engine\Render Passes\Ambient Occlusion</Filter>
+    </ClInclude>
+    <ClInclude Include="Octree.h">
+      <Filter>Utilities\Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Utilities\Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="Frustum.h">
+      <Filter>Utilities\Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingVolumes.h">
+      <Filter>Utilities\Octree</Filter>
+    </ClInclude>
+    <ClInclude Include="HDRToCubeMapConverter.h">
+      <Filter>Rendering Engine\Environment Map\Environement Map Generators\HDR To Cube Map Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusteredCullingUtil.h">
+      <Filter>Rendering Engine\Render Passes\Clustered Light Culling</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

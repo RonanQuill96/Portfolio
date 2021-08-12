@@ -1,0 +1,126 @@
+#version 450
+
+layout(push_constant) uniform PushConstants
+{
+	ivec3 tile_nums;
+	float pad;
+    mat4 viewMatrix;
+} push_constants;
+
+struct Cluster
+{
+    vec4 minVertex; //W component is if the cluster is active or not
+    vec4 maxVertex;
+};
+
+layout(set = 0, binding = 0) buffer readonly Clusters
+{
+    Cluster cluster[];
+} clusters;
+
+struct PointLight
+{
+    vec3 lightColour;
+	float lightIntensity;
+
+	vec3 position;
+	float range;
+};
+
+#define MAX_LIGHT_PER_PASS 10000
+
+layout(set = 0, binding = 1) uniform  PointLights
+{
+    int count;
+	int pad1;
+	int pad2;
+	int pad3;
+	PointLight pointLights[MAX_LIGHT_PER_PASS];
+} pointLights;
+
+
+#define MAX_POINT_LIGHT_PER_CLUSTER 1024
+struct LightVisiblity
+{
+	uint count;
+	uint lightindices[MAX_POINT_LIGHT_PER_CLUSTER];
+};
+
+layout(set = 0, binding = 2) buffer writeonly ClusterLights
+{
+    LightVisiblity lightVisiblity[];
+} tileLights;
+
+layout(local_size_x = 8 , local_size_y = 8, local_size_z = 4) in;
+
+bool TestSphereAABB(uint light, uint tile);
+float SquareDistancePointAABB(vec3 point, uint tile);
+
+shared uint tileLightCount;
+
+void main()
+{
+    uint threadCount = gl_WorkGroupSize.x * gl_WorkGroupSize.y * gl_WorkGroupSize.z;       
+    uint tileIndex = gl_WorkGroupID.x +
+                     gl_WorkGroupID.y * gl_NumWorkGroups.x +
+                     gl_WorkGroupID.z * (gl_NumWorkGroups.x * gl_NumWorkGroups.y);
+    
+    
+    tileLightCount = 0;
+
+    if(clusters.cluster[tileIndex].minVertex.w < 1.0) 
+    {
+        return;
+    }
+
+    barrier();
+
+    for (uint pointLightIndex = gl_LocalInvocationIndex; pointLightIndex < pointLights.count; pointLightIndex += threadCount)
+    {
+        if(TestSphereAABB(pointLightIndex, tileIndex))
+        {
+			uint slot = atomicAdd(tileLightCount, 1);
+            if (slot >= MAX_POINT_LIGHT_PER_CLUSTER)
+            {
+                break;
+            }
+            tileLights.lightVisiblity[tileIndex].lightindices[slot] = pointLightIndex;
+        }
+    }
+
+    barrier();
+
+    tileLights.lightVisiblity[tileIndex].count = min(MAX_POINT_LIGHT_PER_CLUSTER, tileLightCount);
+}
+
+bool TestSphereAABB(uint light, uint tile)
+{
+    float radius = pointLights.pointLights[light].range;
+    vec3 center  = vec3(push_constants.viewMatrix * vec4(pointLights.pointLights[light].position, 1.0));
+    float squaredDistance = SquareDistancePointAABB(center, tile);
+
+    return squaredDistance <= (radius * radius);
+}
+
+float SquareDistancePointAABB(vec3 point, uint tile)
+{
+    float sqDistance = 0.0;
+    Cluster currentCell = clusters.cluster[tile];
+
+    for(int i = 0; i < 3; ++i)
+    {
+        float v = point[i];
+
+        if(v < currentCell.minVertex[i]) 
+        {
+            sqDistance += (currentCell.minVertex[i] - v) * (currentCell.minVertex[i] - v);
+        }
+
+        if(v > currentCell.maxVertex[i]) 
+        {
+            sqDistance += (v - currentCell.maxVertex[i]) * (v - currentCell.maxVertex[i]);
+        }
+    } 
+
+    return sqDistance;
+}

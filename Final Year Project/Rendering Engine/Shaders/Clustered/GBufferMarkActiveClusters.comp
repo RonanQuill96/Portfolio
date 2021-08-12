@@ -1,0 +1,63 @@
+#version 450
+
+#include "../Common/LightingCommon.glsl"
+
+layout(push_constant) uniform PushConstants
+{	
+    ivec3 clusterCounts;
+    int clusterSizeX;
+
+    float zNear;
+    float zFar;
+    float scale;
+    float bias;
+
+    vec2 resolution;
+} pushConstants;
+
+struct Cluster
+{
+    vec4 minVertex; //W component is if the cluster is active or not
+    vec4 maxVertex;
+};
+
+layout(set = 0, binding = 0) buffer writeonly Clusters
+{
+    Cluster cluster[];
+} clusters;
+
+layout(set = 0, binding = 1) uniform sampler2D opaqueDepth;
+
+layout(local_size_x = 8 , local_size_y = 8, local_size_z = 1) in;
+
+void main()
+{
+    uint clusterSize = 32;
+
+    uint threadCount = gl_WorkGroupSize.x * gl_WorkGroupSize.y * gl_WorkGroupSize.z;
+
+    uint T = gl_WorkGroupID.x +
+             gl_WorkGroupID.y * gl_NumWorkGroups.x +
+             gl_WorkGroupID.z * (gl_NumWorkGroups.x * gl_NumWorkGroups.y);
+
+    uint xCoord = pushConstants.clusterSizeX *  gl_WorkGroupID.x;
+    uint yCoord = pushConstants.clusterSizeX *  gl_WorkGroupID.y;
+
+    for(uint i = gl_LocalInvocationIndex; i < clusterSize * clusterSize; i += threadCount)
+    {
+        uint x = xCoord + (i / clusterSize);
+        uint y = yCoord + (i % clusterSize);
+
+        vec2 fragCoord = vec2(x, y);
+        float depth = texture(opaqueDepth, fragCoord / pushConstants.resolution).r;
+
+        //Mark cluster as active                        
+        uint zTile     = uint(max(log2(LinearDepth(depth, pushConstants.zNear, pushConstants.zFar)) * pushConstants.scale + pushConstants.bias, 0.0));
+        uvec3 tiles    = uvec3( uvec2( fragCoord.xy / pushConstants.clusterSizeX ), zTile);
+        uint tileIndex = tiles.x +
+                        pushConstants.clusterCounts.x * tiles.y +
+                        (pushConstants.clusterCounts.x * pushConstants.clusterCounts.y) * tiles.z;  
+
+        clusters.cluster[tileIndex].minVertex.w = 1.0;
+    }    
+}

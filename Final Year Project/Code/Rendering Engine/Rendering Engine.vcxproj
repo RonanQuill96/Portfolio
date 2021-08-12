@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5026921e-ad89-4b55-ab22-def2bdd8fa88}</ProjectGuid>
+    <RootNamespace>RenderingEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VULKAN_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VULKAN_SDK)\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VULKAN_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VULKAN_SDK)\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>41943040000</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>
+      </StackReserveSize>
+      <StackCommitSize>41943040000</StackCommitSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AmbientOcclusionBlur.cpp" />
+    <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="BaseComponent.cpp" />
+    <ClCompile Include="BoundingVolumes.cpp" />
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="CameraComponent.cpp" />
+    <ClCompile Include="ClusteredDeferredShading.cpp" />
+    <ClCompile Include="ClusteredLightCulling.cpp" />
+    <ClCompile Include="CommandPool.cpp" />
+    <ClCompile Include="ComputePipelineBuilder.cpp" />
+    <ClCompile Include="DebugLinesPipeline.cpp" />
+    <ClCompile Include="DeferredRenderer.cpp" />
+    <ClCompile Include="DirectionalLightComponent.cpp" />
+    <ClCompile Include="DirectionalLightPipeline.cpp" />
+    <ClCompile Include="EnvironmentLightPipeline.cpp" />
+    <ClCompile Include="EnvironmentMapGenerator.cpp" />
+    <ClCompile Include="ForwardRenderer.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GBuffer.cpp" />
+    <ClCompile Include="GeometryGenerator.cpp" />
+    <ClCompile Include="GeometryPass.cpp" />
+    <ClCompile Include="GraphicsAPI.cpp" />
+    <ClCompile Include="GraphicsPipelineBuilder.cpp" />
+    <ClCompile Include="HorizonBasedAmbientOcclusion.cpp" />
+    <ClCompile Include="HDRToCubeMapConverter.cpp" />
+    <ClCompile Include="ImageData.cpp" />
+    <ClCompile Include="ImageUtils.cpp" />
+    <ClCompile Include="IntegrationMapGeneratorPass.cpp" />
+    <ClCompile Include="LightComponent.cpp" />
+    <ClCompile Include="LightingPass.cpp" />
+    <ClCompile Include="LogicalDevice.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MBOIT.cpp" />
+    <ClCompile Include="MBOITStaticMeshPBRParametersPipeline.cpp" />
+    <ClCompile Include="MBOITStaticMeshPBRTexturePipeline.cpp" />
+    <ClCompile Include="MeshComponent.cpp" />
+    <ClCompile Include="PhysicalDevice.cpp" />
+    <ClCompile Include="PipelineLayoutBuilder.cpp" />
+    <ClCompile Include="PointLightComponent.cpp" />
+    <ClCompile Include="RadianceMapGenerationPass.cpp" />
+    <ClCompile Include="RenderingEngine.cpp" />
+    <ClCompile Include="RenderingScene.cpp" />
+    <ClCompile Include="IrrandianceMapPass.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SkyboxPipeline.cpp" />
+    <ClCompile Include="StaticMeshPBRTexturePipeline.cpp" />
+    <ClCompile Include="StaticMeshPipeline.cpp" />
+    <ClCompile Include="SwapChain.cpp" />
+    <ClCompile Include="SystemTimer.cpp" />
+    <ClCompile Include="UIRenderer.cpp" />
+    <ClCompile Include="VulkanApplication.cpp" />
+    <ClCompile Include="VulkanDebug.cpp" />
+    <ClCompile Include="VulkanInstance.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="AmbientOcclusionBlur.h" />
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="BaseComponent.h" />
+    <ClInclude Include="BoundingVolumes.h" />
+    <ClInclude Include="Buffer.h" />
+    <ClInclude Include="CameraComponent.h" />
+    <ClInclude Include="ClusteredDeferredShading.h" />
+    <ClInclude Include="ClusteredLightCulling.h" />
+    <ClInclude Include="CommandPool.h" />
+    <ClInclude Include="ComputePipelineBuilder.h" />
+    <ClInclude Include="DebugLinesPipeline.h" />
+    <ClInclude Include="DeferredRenderer.h" />
+    <ClInclude Include="DescriptorSetBuilder.h" />
+    <ClInclude Include="DescriptorSetLayoutBuilder.h" />
+    <ClInclude Include="DescriptorSetManager.h" />
+    <ClInclude Include="DirectionalLightComponent.h" />
+    <ClInclude Include="DirectionalLightPipeline.h" />
+    <ClInclude Include="EnvironmentLightPipeline.h" />
+    <ClInclude Include="EnvironmentMap.h" />
+    <ClInclude Include="EnvironmentMapGenerator.h" />
+    <ClInclude Include="ForwardRenderer.h" />
+    <ClInclude Include="ForwardRenderingUtils.h" />
+    <ClInclude Include="Frustum.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GBuffer.h" />
+    <ClInclude Include="GeometryGenerator.h" />
+    <ClInclude Include="GeometryPass.h" />
+    <ClInclude Include="GlobalOptions.h" />
+    <ClInclude Include="GraphicsAPI.h" />
+    <ClInclude Include="GraphicsPipelineBuilder.h" />
+    <ClInclude Include="HorizonBasedAmbientOcclusion.h" />
+    <ClInclude Include="HDRToCubeMapConverter.h" />
+    <ClInclude Include="ImageData.h" />
+    <ClInclude Include="ImageUtils.h" />
+    <ClInclude Include="IndexBuffer.h" />
+    <ClInclude Include="IntegrationMapGeneratorPass.h" />
+    <ClInclude Include="LightComponent.h" />
+    <ClInclude Include="LightingPass.h" />
+    <ClInclude Include="LogicalDevice.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MBOIT.h" />
+    <ClInclude Include="MBOITStaticMeshPBRParametersPipeline.h" />
+    <ClInclude Include="MBOITStaticMeshPBRTexturePipeline.h" />
+    <ClInclude Include="MBOITUtils.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MeshComponent.h" />
+    <ClInclude Include="MeshMaterial.h" />
+    <ClInclude Include="Octree.h" />
+    <ClInclude Include="PhysicalDevice.h" />
+    <ClInclude Include="PipelineLayoutBuilder.h" />
+    <ClInclude Include="PointLightComponent.h" />
+    <ClInclude Include="QueueSubmitInfo.h" />
+    <ClInclude Include="RadianceMapGenerationPass.h" />
+    <ClInclude Include="RenderingEngine.h" />
+    <ClInclude Include="RenderingScene.h" />
+    <ClInclude Include="IrrandianceMapPass.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="ShaderUtils.h" />
+    <ClInclude Include="SkyboxPipeline.h" />
+    <ClInclude Include="StaticMeshPBRTexturePipeline.h" />
+    <ClInclude Include="StaticMeshPipeline.h" />
+    <ClInclude Include="StorageBuffer.h" />
+    <ClInclude Include="SwapChain.h" />
+    <ClInclude Include="SystemTimer.h" />
+    <ClInclude Include="ClusteredCullingUtil.h" />
+    <ClInclude Include="UIRenderer.h" />
+    <ClInclude Include="UniformBuffer.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="VulkanApplication.h" />
+    <ClInclude Include="VulkanDebug.h" />
+    <ClInclude Include="VulkanIncludes.h" />
+    <ClInclude Include="VulkanInstance.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

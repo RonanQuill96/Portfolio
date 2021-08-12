@@ -14,6 +14,9 @@ I can be contacted at RonanQuill96@gmail.com to discuss any opportunities that y
 2) Each folder contains a ".sln" file which can be opened in Microsoft Visual Studio 2019.
 3) Compile with C++17 enabled.
 
+### Final Year Project
+A real time 3D rendering engine created as part of undergraduate degree, using C++ and the Vulkan graphics API.
+This folder contains the code, an executable version of the project and my thesis document for the project. Due to GitHub file size limits I had to remove the asset folder required to run the project. If you would like to run the project please contact me and I will provide this asset folder.
 
 ### SIMD Math Library
 A basic SIMD math library which contains implementations of a 4D Vector, 4x4 Matrix and associated methods.
@@ -34,6 +37,3 @@ The ray tracer is multithreaded through the use of my C++ thread pool library an
 ###### Example 2: Dimensions: 1920 x 1080. Samples Per Pixel: 100
 ![Random Scene](RandomScene.png)
 
-
-### FYP Interim Report
-This is the interim submission of my undergraduate thesis which details the implmentation and theory for my Vulkan 3D rendering engine.
